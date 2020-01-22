@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "immer": "^5.3.2",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",

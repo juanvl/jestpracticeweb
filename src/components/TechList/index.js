@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { addTech } from '~/store/modules/techs/actions';
 
 export default function TechList() {
-  const [techs, setTechs] = useState([]);
   const [newTech, setNewTech] = useState('');
 
-  const techs = useSelector(state => state.techs)
+  const dispatch = useDispatch();
+
+  const techs = useSelector(state => state.techs);
 
   function handleAddTech() {
-    setTechs([...techs, newTech]);
+    dispatch(addTech(newTech));
     setNewTech('');
   }
 
