@@ -7,4 +7,10 @@ describe('Techs reducer', () => {
 
     expect(state).toStrictEqual(['Node.js']);
   });
+
+  it('DEFAULT', () => {
+    const state = reducer(undefined, {});
+
+    expect(state).toStrictEqual(INITIAL_STATE);
+  });
 });
